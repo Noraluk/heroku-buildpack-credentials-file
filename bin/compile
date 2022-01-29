@@ -2,11 +2,13 @@
 # bin/compile <build-dir> <cache-dir> <env-dir>
 
 BUILD_DIR=${1:-}
+CACHE_DIR=${2:-}
+ENV_DIR=${3:-}
 
 echo "-----> generate credentials file"
 mkdir -p $BUILD_DIR/.profile.d
 
-echo "echo ${JSON_CREDENTIALS@Q} -> /app/google-credentials.json" > $BUILD_DIR/.profile.d/google-credentials.sh
+echo "echo ${CREDENTIAL_JSON@Q} -> /app/google-credentials.json" > $BUILD_DIR/.profile.d/google-credentials.sh
 chmod +x $BUILD_DIR/.profile.d/google-credentials.sh
 
 echo "-----> generate finish"
