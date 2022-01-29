@@ -6,7 +6,7 @@ BUILD_DIR=${1:-}
 echo "-----> generate credentials file"
 mkdir -p $BUILD_DIR/.profile.d
 
-echo "-----> echo ${JSON_CREDENTIALS@Q} -> /app/google-credentials.json"
-# chmod +x $BUILD_DIR/.profile.d/${JSON_CREDENTIALS_NAME}.sh
+echo "-----> echo ${JSON_CREDENTIALS@Q} -> /app/google-credentials.json" > $BUILD_DIR/.profile.d/google-credentials.sh
+chmod +x $BUILD_DIR/.profile.d/google-credentials.sh
 
 echo "-----> generate finish"
