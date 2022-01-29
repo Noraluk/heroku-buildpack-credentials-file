@@ -2,14 +2,11 @@
 # bin/compile <build-dir> <cache-dir> <env-dir>
 
 BUILD_DIR=${1:-}
-CACHE_DIR=${2:-}
-ENV_DIR=${3:-}
 
-echo "-----> Create credentials file"
-echo "--> ${BUILD_DIR}"
-echo "--> ${CACHE_DIR}"
-echo "--> ${ENV_DIR}"
-echo "finish"
-
+echo "-----> generate credentials file"
 mkdir -p $BUILD_DIR/.profile.d
-mkdir foo
+
+echo "-----> echo ${JSON_CREDENTIALS@Q} -> /app/${JSON_CREDENTIALS_NAME}.json" -> $BUILD_DIR/.profile.d/${JSON_CREDENTIALS_NAME}.sh
+chmod +x $BUILD_DIR/.profile.d/${JSON_CREDENTIALS_NAME}.sh
+
+echo "-----> generate finish"
