@@ -6,9 +6,13 @@ CACHE_DIR=${2:-}
 ENV_DIR=${3:-}
 
 echo "-----> generate credentials file"
-mkdir -p $BUILD_DIR/.profile.d
+echo "-----> ${CREDENTIAL_JSON}"
+echo "-----> ${JSON_CREDENTIALS_NAME}"
+echo "-----> ${GOOGLE_CREDENTIALS}"
+echo "-----> ${GOOGLE_APPLICATION_CREDENTIALS}"
+# mkdir -p $BUILD_DIR/.profile.d
 
-echo "echo ${CREDENTIAL_JSON@Q} -> /app/google-credentials.json" > $BUILD_DIR/.profile.d/google-credentials.sh
-chmod +x $BUILD_DIR/.profile.d/google-credentials.sh
+# echo "echo ${CREDENTIAL_JSON@Q} -> /app/google-credentials.json" > $BUILD_DIR/.profile.d/google-credentials.sh
+# chmod +x $BUILD_DIR/.profile.d/google-credentials.sh
 
 echo "-----> generate finish"
