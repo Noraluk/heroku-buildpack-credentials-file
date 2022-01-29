@@ -1,4 +1,4 @@
 #!/bin/sh
 
-echo "credentials file"
+echo "Google Cloud"
 exit 0
