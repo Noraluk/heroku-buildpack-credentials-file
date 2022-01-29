@@ -1,4 +1,4 @@
 #!/bin/sh
 
-echo "test"
+echo "credentials file"
 exit 0

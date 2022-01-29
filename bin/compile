@@ -1,4 +1,15 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir> <env-dir>
 
-mkdir test
+BUILD_DIR=${1:-}
+CACHE_DIR=${2:-}
+ENV_DIR=${3:-}
+
+echo "-----> Create credentials file"
+echo "--> ${BUILD_DIR}"
+echo "--> ${CACHE_DIR}"
+echo "--> ${ENV_DIR}"
+echo "finish"
+
+mkdir -p $BUILD_DIR/.profile.d
+mkdir foo
